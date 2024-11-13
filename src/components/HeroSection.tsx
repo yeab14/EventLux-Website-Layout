@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
       </AnimatePresence>
 
       {/* Background Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70 backdrop-blur-md"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-10 backdrop-blur-md"></div>
 
       {/* Main Content with Smooth Text Fade-in */}
       <motion.div
@@ -50,7 +50,7 @@ const HeroSection: React.FC = () => {
         transition={{ duration: 1.5 }}
       >
         <motion.h1
-          className="text-5xl font-extrabold leading-tight mb-4 text-shadow-lg"
+          className="text-5xl font-extrabold italic leading-tight mb-4 text-shadow-lg"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
@@ -59,7 +59,7 @@ const HeroSection: React.FC = () => {
         </motion.h1>
 
         <motion.p
-          className="text-2xl mb-8 text-shadow-md"
+          className="text-2xl mb-8 italic text-shadow-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}

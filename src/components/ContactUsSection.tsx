@@ -98,20 +98,6 @@ const ContactUsSection: React.FC = () => {
             <p className="text-gray-600">✉️ contact@eventlux.com</p>
           </motion.div>
         </motion.div>
-
-        {/* Contact Information - Positioned on top-right */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute top-20 right-10 mt-40 mr-2 p-6 w-full max-w-xs bg-green-50 rounded-xl shadow-md border border-green-200 text-gray-700 space-y-4"
-          style={{ backdropFilter: 'blur(10px)' }}
-        >
-          <h3 className="text-lg font-bold text-green-700">Contact Information</h3>
-          <p>📍 123 Luxury Ave, City, State</p>
-          <p>📞 (123) 456-7890</p>
-          <p>✉️ contact@eventlux.com</p>
-        </motion.div>
       </div>
     </section>
   );
