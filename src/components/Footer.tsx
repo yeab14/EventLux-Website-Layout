@@ -41,7 +41,7 @@ const HeroSection: React.FC = () => {
       </AnimatePresence>
 
       {/* Background Gradient Overlay with Blur */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-20 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60 backdrop-blur-lg"></div>
 
       {/* Main Content with Smooth Text Fade-in */}
       <motion.div
