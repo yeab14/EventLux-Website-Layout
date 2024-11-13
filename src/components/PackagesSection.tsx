@@ -13,7 +13,10 @@ const PackageCard: React.FC<{ title: string, description: string, price: string 
     return (
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Packages</h2>
+        <h2 className="text-4xl font-extrabold text-gray-900 tracking-wide">
+            Our Packages
+          </h2>
+          <div className="mt-2 h-1 w-16 bg-green-500 mx-auto rounded-full mb-8"></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <PackageCard
               title="Basic Package"

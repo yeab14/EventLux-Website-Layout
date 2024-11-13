@@ -4,7 +4,10 @@ const ServicesSection: React.FC = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">Our Services</h2>
+         <h2 className="text-4xl font-extrabold text-gray-900 tracking-wide">
+            Our Services
+          </h2>
+          <div className="mt-2 h-1 w-16 bg-green-500 mx-auto rounded-full mb-8"></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-white p-6 shadow-lg rounded-lg">
             <FaRegCalendar className="text-4xl text-green-600 mb-4 mx-auto" />
