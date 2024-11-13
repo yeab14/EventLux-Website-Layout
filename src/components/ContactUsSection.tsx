@@ -1,15 +1,15 @@
-// ContactUsSection with enhanced UI
 import { motion } from "framer-motion";
 
 const ContactUsSection: React.FC = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
       <div className="container mx-auto text-center">
+        {/* Title with Enhanced Animation */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-extrabold text-gray-900 tracking-wide"
+          className="text-4xl font-extrabold text-gray-900 tracking-wide mb-4"
         >
           Get in Touch
         </motion.h2>
@@ -17,62 +17,100 @@ const ContactUsSection: React.FC = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-2 h-1 w-16 bg-green-500 mx-auto rounded-full mb-8"
+          className="mt-2 h-1 w-20 bg-green-500 mx-auto rounded-full mb-8"
         ></motion.div>
-        
-        {/* Form with subtle animations */}
+
+        {/* Contact Form - Centered */}
         <motion.form
-          className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg"
+          className="relative z-10 max-w-lg mx-auto p-8 bg-white rounded-xl shadow-xl border-t-4 border-green-500"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          {/* Input fields with engaging styles */}
           <div className="grid grid-cols-1 gap-4 mb-4">
-            <input type="text" placeholder="Name" className="p-4 border border-gray-300 rounded-lg transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500" />
-            <input type="email" placeholder="Email" className="p-4 border border-gray-300 rounded-lg transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500" />
-            <input type="tel" placeholder="Phone" className="p-4 border border-gray-300 rounded-lg transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500" />
-            <input type="date" className="p-4 border border-gray-300 rounded-lg transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500" />
-            <select className="p-4 border border-gray-300 rounded-lg transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500">
+            <input
+              type="text"
+              placeholder="Name"
+              className="p-4 border border-green-200 rounded-lg bg-green-50 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="p-4 border border-green-200 rounded-lg bg-green-50 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl"
+            />
+            <input
+              type="tel"
+              placeholder="Phone"
+              className="p-4 border border-green-200 rounded-lg bg-green-50 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl"
+            />
+            <input
+              type="date"
+              className="p-4 border border-green-200 rounded-lg bg-green-50 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl"
+            />
+            <select className="p-4 border border-green-200 rounded-lg bg-green-50 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl">
               <option>Event Type</option>
               <option>Wedding</option>
               <option>Corporate</option>
               <option>Party</option>
             </select>
-            <textarea placeholder="Message" className="p-4 border border-gray-300 rounded-lg h-40 transition duration-300 hover:shadow-lg focus:ring-2 focus:ring-green-500"></textarea>
+            <textarea
+              placeholder="Message"
+              className="p-4 border border-green-200 rounded-lg bg-green-50 h-40 focus:outline-none focus:ring-4 focus:ring-green-300 transition duration-300 hover:shadow-xl"
+            ></textarea>
           </div>
           <motion.button
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1, border: "2px solid rgba(34,197,94, 1)" }}
             type="submit"
-            className="bg-green-600 text-white px-6 py-3 rounded shadow-lg hover:bg-green-700 transition-transform duration-300"
+            className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-110 hover:bg-green-700 hover:text-glow"
           >
             Send Inquiry
           </motion.button>
         </motion.form>
 
-        {/* Contact info with decorative lines */}
-        <div className="mt-8">
-          <p className="text-lg">Address: 123 Luxury Ave, City, State</p>
-          <p className="text-lg">Phone: (123) 456-7890</p>
-          <p className="text-lg">Email: contact@eventlux.com</p>
-        </div>
-
-        {/* Animated map with hover effect */}
+        {/* Google Maps Embed - Positioned Below */}
         <motion.div
-          className="mt-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="mt-16 relative"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=..."
+            title="EventLux Location"
+            src="https://www.google.com/maps/embed?pb=..." // Use your actual Google Maps API link
             width="100%"
-            height="400"
+            height="450"
+            frameBorder="0"
             style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            className="rounded-lg shadow-lg transition duration-300 hover:scale-105"
+            allowFullScreen={true}
           ></iframe>
+
+          {/* Map Legend / Info Box */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="absolute top-10 left-10 bg-white p-4 rounded-lg shadow-xl border border-green-200"
+            style={{ backdropFilter: 'blur(5px)' }}
+          >
+            <h3 className="text-lg font-bold text-green-700">EventLux Location</h3>
+            <p className="text-gray-600">📍 123 Luxury Ave, City, State</p>
+            <p className="text-gray-600">📞 (123) 456-7890</p>
+            <p className="text-gray-600">✉️ contact@eventlux.com</p>
+          </motion.div>
+        </motion.div>
+
+        {/* Contact Information - Positioned on top-right */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute top-20 right-10 mt-40 mr-2 p-6 w-full max-w-xs bg-green-50 rounded-xl shadow-md border border-green-200 text-gray-700 space-y-4"
+          style={{ backdropFilter: 'blur(10px)' }}
+        >
+          <h3 className="text-lg font-bold text-green-700">Contact Information</h3>
+          <p>📍 123 Luxury Ave, City, State</p>
+          <p>📞 (123) 456-7890</p>
+          <p>✉️ contact@eventlux.com</p>
         </motion.div>
       </div>
     </section>
