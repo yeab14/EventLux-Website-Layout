@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   const images = [
-    "/src/assets/decor2.jpg",
-    "/src/assets/decor4.jpg",
-    "/src/assets/gala4.jpg",
-    "/src/assets/gala3.jpg",
-    "/src/assets/vipguests3.jpg",
-    "/src/assets/vipguests2.jpg",
+    "/public/assets/decor2.jpg",
+    "/public/assets/decor4.jpg",
+    "/public/assets/gala4.jpg",
+    "/public/assets/gala3.jpg",
+    "/public/assets/vipguests3.jpg",
+    "/public/assets/vipguests2.jpg",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

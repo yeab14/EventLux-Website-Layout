@@ -54,7 +54,7 @@ const AboutUsSection: React.FC = () => {
           whileHover={{ y: -5, scale: 1.02 }}
         >
           <video
-            src="/src/assets/eventluxvideo.mp4"
+            src=" /assets/eventluxvideo.mp4"
             autoPlay
             loop
             muted
