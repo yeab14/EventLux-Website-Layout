@@ -2,16 +2,14 @@ import { motion } from "framer-motion";
 
 const ContactUsSection: React.FC = () => {
   return (
-    <section
-      id="contactusSection"
-      className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden"
-    >
+    <section id="contactusSection" className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
       <div className="container mx-auto text-center">
+     
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-extrabold text-gray-900 tracking-wide mb-4"
+          className="text-4xl font-extrabold text-gray-900 tracking-wide hover:text-green-500 transition duration-300"
         >
           Get in Touch
         </motion.h2>
@@ -22,6 +20,7 @@ const ContactUsSection: React.FC = () => {
           className="mt-2 h-1 w-20 bg-green-500 mx-auto rounded-full mb-8"
         ></motion.div>
 
+    
         <motion.form
           className="relative z-10 max-w-lg mx-auto p-8 bg-white rounded-xl shadow-xl border-t-4 border-green-500"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -76,7 +75,7 @@ const ContactUsSection: React.FC = () => {
         >
           <iframe
             title="EventLux Location"
-            src="https://www.google.com/maps/embed?pb=..."
+            src="https://www.google.com/maps/embed?pb=..." 
             width="100%"
             height="450"
             frameBorder="0"
@@ -84,16 +83,15 @@ const ContactUsSection: React.FC = () => {
             allowFullScreen={true}
           ></iframe>
 
+        
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
             className="absolute top-10 left-10 bg-white p-4 rounded-lg shadow-xl border border-green-200"
-            style={{ backdropFilter: "blur(5px)" }}
+            style={{ backdropFilter: 'blur(5px)' }}
           >
-            <h3 className="text-lg font-bold text-green-700">
-              EventLux Location
-            </h3>
+            <h3 className="text-lg font-bold text-green-700">EventLux Location</h3>
             <p className="text-gray-600">📍 123 Luxury Ave, City, State</p>
             <p className="text-gray-600">📞 (123) 456-7890</p>
             <p className="text-gray-600">✉️ contact@eventlux.com</p>
