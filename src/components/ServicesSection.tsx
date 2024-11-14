@@ -2,7 +2,7 @@ import { FaRegCalendar, FaMapMarkerAlt, FaConciergeBell, FaMusic } from 'react-i
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100">
+    <section id="servicesSection" className="py-16 bg-gray-100">
       <div className="container mx-auto text-center">
          <h2 className="text-4xl font-extrabold text-gray-900 tracking-wide">
             Our Services

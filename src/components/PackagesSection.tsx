@@ -11,7 +11,7 @@ const PackageCard: React.FC<{ title: string, description: string, price: string 
   
   const PackagesSection: React.FC = () => {
     return (
-      <section className="py-16 bg-gray-100">
+      <section id="packagesSection" className="py-16 bg-gray-100">
         <div className="container mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 tracking-wide">
             Our Packages

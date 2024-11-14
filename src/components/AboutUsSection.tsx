@@ -4,7 +4,7 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
+    <section id="aboutusSection" className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
       <div className="container mx-auto px-6 text-center">
         {/* Section Title with Decorative Line */}
         <motion.div

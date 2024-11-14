@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ContactUsSection: React.FC = () => {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
+    <section id="contactusSection" className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
       <div className="container mx-auto text-center">
         {/* Title with Enhanced Animation */}
         <motion.h2
