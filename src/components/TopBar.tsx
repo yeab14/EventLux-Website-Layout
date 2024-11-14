@@ -1,4 +1,4 @@
-import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const TopBar: React.FC = () => {
   return (
@@ -10,7 +10,9 @@ const TopBar: React.FC = () => {
         <FaInstagram className="cursor-pointer" />
         <FaFacebook className="cursor-pointer" />
         <FaTwitter className="cursor-pointer" />
-        <button className="bg-green-600 px-4 py-1 rounded">Login / Register</button>
+        <button className="bg-green-600 px-4 py-1 rounded">
+          Login / Register
+        </button>
       </div>
     </div>
   );

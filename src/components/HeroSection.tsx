@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Animation library for React
+import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection: React.FC = () => {
   const images = [
@@ -13,7 +13,6 @@ const HeroSection: React.FC = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Change the image every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -23,15 +22,17 @@ const HeroSection: React.FC = () => {
   }, [images.length]);
 
   return (
-    <section id="homeSection" className="relative h-screen flex flex-col justify-center items-center text-center text-white overflow-hidden">
-      {/* Sliding Transition Effect */}
+    <section
+      id="homeSection"
+      className="relative h-screen flex flex-col justify-center items-center text-center text-white overflow-hidden"
+    >
       <AnimatePresence>
         <motion.div
           key={images[currentImageIndex]}
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${images[currentImageIndex]})`,
-            filter: "brightness(50%)", // Darken the image for better text contrast
+            filter: "brightness(50%)",
           }}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -40,10 +41,8 @@ const HeroSection: React.FC = () => {
         />
       </AnimatePresence>
 
-      {/* Background Gradient Overlay with Blur */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-60 backdrop-blur-lg"></div>
 
-      {/* Main Content with Smooth Text Fade-in */}
       <motion.div
         className="z-10 px-6 sm:px-12 md:px-24 max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -92,7 +91,6 @@ const HeroSection: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Slideshow Navigation Dots */}
       <div className="absolute bottom-8 flex justify-center space-x-2 z-10">
         {images.map((_, index) => (
           <motion.button

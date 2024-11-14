@@ -1,26 +1,27 @@
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"; 
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const AboutUsSection: React.FC = () => {
   return (
-    <section id="aboutusSection" className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden">
-      {/* Animated Background Shapes */}
+    <section
+      id="aboutusSection"
+      className="relative py-20 bg-gradient-to-b from-white to-gray-100 overflow-hidden"
+    >
       <div className="absolute inset-0 pointer-events-none">
-        <motion.div 
-          className="absolute top-20 left-1/4 w-64 h-64 bg-green-400 opacity-30 rounded-full filter blur-2xl" 
+        <motion.div
+          className="absolute top-20 left-1/4 w-64 h-64 bg-green-400 opacity-30 rounded-full filter blur-2xl"
           animate={{ y: [0, 20, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         ></motion.div>
-        <motion.div 
-          className="absolute bottom-10 right-1/4 w-96 h-96 bg-green-500 opacity-20 rounded-full filter blur-3xl" 
+        <motion.div
+          className="absolute bottom-10 right-1/4 w-96 h-96 bg-green-500 opacity-20 rounded-full filter blur-3xl"
           animate={{ x: [0, -20, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 6, repeat: Infinity }}
         ></motion.div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        {/* Section Title with Decorative Line */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,17 +34,18 @@ const AboutUsSection: React.FC = () => {
           <div className="mt-2 h-1 w-16 bg-green-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        {/* Description */}
         <motion.p
           className="text-lg text-gray-700 max-w-2xl mx-auto mb-12 leading-relaxed hover:text-green-500 transition duration-300"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 1 }}
         >
-          EventLux is a premier event planning company with a passion for creating unforgettable experiences. Founded on the principles of excellence, creativity, and client-centric service, we bring your vision to life with elegance and precision.
+          EventLux is a premier event planning company with a passion for
+          creating unforgettable experiences. Founded on the principles of
+          excellence, creativity, and client-centric service, we bring your
+          vision to life with elegance and precision.
         </motion.p>
 
-        {/* Video Embed with Hover Effect and Floating Animation */}
         <motion.div
           className="relative mb-10 mx-auto w-full max-w-4xl overflow-hidden rounded-lg shadow-lg group"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -59,11 +61,10 @@ const AboutUsSection: React.FC = () => {
             playsInline
             className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-75"
           />
-          {/* Overlay Gradient */}
+
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-50"></div>
         </motion.div>
 
-        {/* Core Values with Animated Icons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,7 +74,11 @@ const AboutUsSection: React.FC = () => {
             Our Core Values
           </h3>
           <ul className="text-lg list-none pl-8 text-left max-w-lg mx-auto space-y-6">
-            {["Attention to Detail", "Unmatched Service", "Endless Creativity"].map((value, index) => (
+            {[
+              "Attention to Detail",
+              "Unmatched Service",
+              "Endless Creativity",
+            ].map((value, index) => (
               <motion.li
                 key={value}
                 initial={{ opacity: 0, x: -30 }}
@@ -81,9 +86,9 @@ const AboutUsSection: React.FC = () => {
                 transition={{ delay: 0.7 + index * 0.1, duration: 0.8 }}
                 className="font-semibold text-gray-800 flex items-start"
               >
-                <FontAwesomeIcon 
-                  icon={faCheckCircle} 
-                  className="text-green-500 mr-3 mt-1 animate-pulse transition duration-500 ease-in-out hover:rotate-45" 
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-green-500 mr-3 mt-1 animate-pulse transition duration-500 ease-in-out hover:rotate-45"
                 />
                 <span className="ml-1 hover:text-green-500 transition duration-300">
                   <strong>{value}</strong>: {getValueDescription(value)}
@@ -97,7 +102,6 @@ const AboutUsSection: React.FC = () => {
   );
 };
 
-// Helper function to get description for each core value
 const getValueDescription = (value: string): string => {
   switch (value) {
     case "Attention to Detail":
